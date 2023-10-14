@@ -1,0 +1,63 @@
+ <div class="container-fluid" style="margin-bottom: 500px" *ngIf="this.categorieservice.isPanier==false">
+   <div class="row">
+     <div class="col-12">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <br><br>
+       <div class="card h-100">
+        <div class="card-body">
+        <h5 class="card-title"></h5>
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+              <div class="justify-content-center p-3 mb-2 bg-secondary text-white">
+                <p class="text-center"><b>Votre panier est vide!</b></p>
+              </div>
+            </div>
+            <div class="col-1"></div>
+          </div>
+        </div>
+       </div>
+     </div>
+   </div>
+   <p>panier works!</p>
+ </div>
+
+
+ <div class="container-fluid" *ngIf="this.categorieservice.isPanier==true" style="margin-bottom: 500px">
+   <div class="row">
+     <div class="col-12">
+       &nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;
+
+     </div>
+   </div>
+   <div class="row">
+
+     <div class="col-12">
+       <table class="table " border="1">
+         <tbody><tr>
+           <td class="text-center font-weight-bold bg-primary text-white">
+             <span><em>01.</em> Récapitulatif</span>
+           </td>
+           <td class="text-center font-weight-bold ">
+             <span><em>02.</em> Validation</span>
+           </td>
+         </tr>
+         </tbody></table>
+
+   <app-recapitulatif></app-recapitulatif>
+
+     </div>
+     &nbsp;&nbsp;&nbsp;&nbsp;
+   </div>
+   &nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;
+ </div>
+
+<app-footer></app-footer>

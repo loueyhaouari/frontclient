@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: azure">
+  <div class="container-fluid" style="padding-right: 0%; padding-left: 0%;">
+
+    <a class="navbar-brand text-success" routerLink="/acceuil"><b><img src="assets/logo_boussettaprimeurs.png" style="width: 50%;"> </b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile_nav" aria-controls="mobile_nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mobile_nav">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0 float-md-end">
+      </ul>
+      <ul class="navbar-nav navbar-light ">
+        <li class="nav-item active ms-auto" routerLink="/acceuil"><a class="nav-link text-primary" ><i class="fa fa-home"></i>&nbsp;<b>Accueil</b></a></li>
+
+        <li class="nav-item "><a class="nav-link text-primary" routerLink="/commandes" ><i class="fa fa-bars" aria-hidden="true"></i>
+          &nbsp;<b>Mes commandes</b></a></li>
+        <li class="nav-item"><a class="nav-link text-primary" routerLink="/panier"><i class="fa fa-shopping-cart"></i>&nbsp;<b>Panier (<span class="paniercount">{{this.categorieService.i}}</span>)</b><input type="hidden" id="shopcartnumber" value="0"></a></li>
+
+        <li class="nav-item dropdown show">
+          <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            &nbsp;&nbsp;<i class="fa fa-user-circle fa-2x"></i>&nbsp;&nbsp;
+          </a>
+          <div class="dropdown-menu dropdown-menu-end bg-light" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-primary" href="#"><i class="fa fa-user"></i>&nbsp;<b>slim</b></a>
+            <!--<a class="dropdown-item text-primary"  href="profil.php"><b>Profil</b></a> -->
+            <a class="dropdown-item text-primary" href="#"><b>Déconnexion</b></a>
+          </div>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>

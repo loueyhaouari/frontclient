@@ -1,0 +1,97 @@
+<div class="main-container" style="background-color:aliceblue">
+  <div class="row no-flex-wrap mt-3" style="height:100%">
+    <div class="card col-md-2 mx-2 " style="height: 50px">
+      <div class="row card-header" style="background-color: darkkhaki">
+        <h4 class="text-center" style="color: azure">Produits</h4>
+      </div>
+      <div class="row list-group ">
+
+        <li class="list-group-item " aria-current="true"   *ngFor="let f of this.familles" (click)="handleFamille(f)">{{f.nom}}</li>
+
+
+      </div>
+
+    </div>
+    <div class="card col-md-7 pl-0 pr-0 background-grey border-none mx-2" style="background-color: aliceblue">
+      <div class="col  pr-0 d-flex flex-column justify-content-between">
+        <div class="mb-3 mt-3" style="height: 25px">
+          <app-app-header ></app-app-header>
+        </div>
+        <br><br>
+        <div class="mb-3 mt-2 row" style="min-height:800px;padding-left: 50px">
+
+          <div  class="card col-md-3 mx-2 mb-2" *ngFor="let p of this.categorieService.produits" style="width: 20rem;height:300px;">
+            {{p.nom}}
+            <img src="assets/" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="row">
+                <a  class="text-lg-end"><i class="fa fa-bookmark"></i></a></div>
+                <h5 class="card-title" style="color: darkkhaki;" (click)="handleProduct()"><a ><b></b></a></h5>
+              <div class="row">
+                <div class="col-md-10">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-2"> <a class="btn btn-success"><i class="fa fa-shopping-cart"></i></a></div>
+
+              </div>
+              <br><br>
+              <div class="d-flex justify-content-center align-items-center">
+                <button  class="btn btn-primary" >Details</button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+    <div class="card col-md-2 mx-5" style="width: 350px;height: fit-content">
+      <div class="row card-header" style="background-color: darkkhaki">
+        <h4 class="text-center" style="color: azure"><i class="fa fa-shopping-cart"></i>&nbsp;Produits</h4>
+
+      </div>
+      <div class="row">
+        <table class="table table-borderless table table-hover" *ngFor="let cart of cartItems">
+          <thead>
+          <tr>
+            <th class="text-center">produit</th>
+            <th class="text-center">qte</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="text-center">{{cart.product.nom}}</td>
+            <td class="text-center">{{cart.qte}}</td>
+            <td class="text-center"><a class="text-danger"><i class="bi bi-trash" (click)="removeCart(cart)"></i></a></td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <div class="row justify-content-center">
+        <a class="btn btn-success col-md-5 mx-2"><i class="fa fa-cart-arrow-down" aria-hidden="true"> &nbsp;</i>Commander</a>
+        <a class="btn btn-danger col-md-5" ><i class="fa fa-trash" aria-hidden="true"></i>
+          &nbsp; Supprimer</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<app-footer></app-footer>
